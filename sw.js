@@ -2,7 +2,8 @@ const CACHE_NAME = 'socan-v1';
 const urlsToCache = [
     '/socan-tom/',
     '/socan-tom/index.html',
-    '/socan-tom/manifest.json'
+    '/socan-tom/manifest.json',
+    '/socan-tom/icon-192.png'
 ];
 
 self.addEventListener('install', event => {
