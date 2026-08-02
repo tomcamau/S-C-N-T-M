@@ -1145,6 +1145,17 @@ window.addEventListener('load', function() {
 </script>
 
 <script>
+// ===== ĐĂNG KÝ SERVICE WORKER (để app dùng được khi offline) =====
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/socan-tom/sw.js')
+            .then(reg => console.log('✅ Service Worker đã đăng ký:', reg.scope))
+            .catch(err => console.log('❌ Đăng ký Service Worker thất bại:', err));
+    });
+}
+</script>
+
+<script>
 // ===== STATE =====
 let gridData = [];
 let cols = 5;
